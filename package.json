@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "test": "cypress run",
+    "testHeadless": "cypress run --browser chrome ",
+    "testChrome": "cypress run --browser chrome",
+    "testFirefox": "cypress run --browser firefox --headed",
+    "cypress:open": "cypress open"
+  },
+  "dependencies": {
+    "cypress": "^10.11.0"
+  }
+}
