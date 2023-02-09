@@ -5,13 +5,25 @@ import selectorHome from "../pages/selectorHome"
 // POM
 
 describe('first test on tuesday', () => {
-  before (function (){
-    
+  // before describe quiero visitar la url
+  // HOOKS 
+  before ( function () {
+    cy.log('before solo')
+    var selector = selectorLogin().dataLogin
+  })
+  beforeEach( function () {
+    cy.visit('')
+    cy.log('Before each test log')
+  })
+  after ( function (){
+    cy.log('Test finalizados')
+    // reporte 
+  })
+  afterEach ( function () {
+    cy.log(' it ha sido completado')
   })
   // HAPPY PATH
-   var selector = selectorLogin().dataLogin
   it('it has to validate website', () => {
-    cy.visit('')
     cy.get(selector.selectorUser).type(selector.user)
     cy.get(selector.selectorPassword).type(selector.password)
     cy.get(selector.selectorButton).click()
@@ -21,7 +33,6 @@ describe('first test on tuesday', () => {
   })
   // NEGATIVE TEST
   it('it has to validate negative test', () => {
-    cy.visit('')
     cy.get(selector.selectorUser).type(selector.nameRandom())
     cy.get(selector.selectorPassword).type(selector.numberRandom())
     cy.get(selector.selectorButton).click()
