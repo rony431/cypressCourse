@@ -2,7 +2,7 @@
   "scripts": {
     "test": "cypress run",
     "testHeadless": "cypress run --browser chrome ",
-    "testChrome": "cypress run --browser chrome",
+    "testChrome": "cypress run --browser chrome --record --key 3c3245e6-8c1e-4e83-82d2-f9c2829e85ed",
     "testFirefox": "cypress run --browser firefox --headed",
     "cypress:open": "cypress open"
   },
