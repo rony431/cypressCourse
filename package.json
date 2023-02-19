@@ -8,5 +8,8 @@
   },
   "dependencies": {
     "cypress": "^10.11.0"
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.3.0"
   }
 }
