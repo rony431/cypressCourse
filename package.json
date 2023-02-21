@@ -1,15 +1,28 @@
 {
+  "name": "test solution",
+  "version": "2.2.0",
+  "description": "This project is meant to be a kind of template to start working with Cucumber and Cypress just cloning the project.",
+  "main": "index.js",
   "scripts": {
-    "test": "cypress run",
     "testHeadless": "cypress run --browser chrome ",
-    "testChrome": "cypress run --browser chrome",
+    "testChrome": "cypress run --browser chrome --headed",
     "testFirefox": "cypress run --browser firefox --headed",
     "cypress:open": "cypress open"
   },
-  "dependencies": {
-    "cypress": "^10.11.0"
-  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "cucumber",
+  "license": "ISC",
   "devDependencies": {
-    "cypress-mochawesome-reporter": "^3.3.0"
+    "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@shelex/cypress-allure-plugin": "^2.34.0",
+    "cypress": "^12.0.2",
+    "esbuild": "^0.16.4",
+    "multiple-cucumber-html-reporter": "^3.0.1"
+  },
+  "dependencies": {
+    "cypress-recurse": "^1.27.0"
   }
 }
